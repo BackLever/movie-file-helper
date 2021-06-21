@@ -1,0 +1,60 @@
+{
+  "name": "movie-file-helper",
+  "version": "1.0.0",
+  "description": "The movie file helper for desktop.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:is32"
+  },
+  "keywords": [
+    "Electron",
+    "BrowserWindow",
+    "sample"
+  ],
+  "author": "Yang Jin Hyung",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^12.0.6"
+  },
+  "build": {
+    "productName" : "MovieFileHelper",
+    "appID": "com.movie.helper",
+    "asar": true,
+    "protocols": {
+      "name": "movieFileHelper",
+      "schemes": [
+        "movieFileHelper"
+      ]
+    }
+  },
+  "win": {
+    "target": [
+      "zip",
+      "nsis"
+    ],
+    "icon": "./resources/installer/Icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  },
+  "directories": {
+    "buildResources": "./resources/installer/",
+    "output": "./dist/",
+    "app": "."
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.7",
+    "electron-builder": "^22.11.7",
+    "jquery-contextmenu": "^2.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BackLever/movie-file-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BackLever/movie-file-helper/issues"
+  },
+  "homepage": "https://github.com/BackLever/movie-file-helper#readme"
+}

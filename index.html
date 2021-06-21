@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movie File Helper - 164202</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="renderer.js"></script>
+    <script tpye="text/javascript" src="movie_search.js"></script>
+    <script tpye="text/javascript" src="print_movie_info.js"></script>
+    <script tpye="text/javascript" src="parse_name.js"></script>
+    <script tpye="text/javascript" src="context_menu.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top_bar">
+            <div class="options">
+                <div>
+                    <span>
+                        <label class="fileSelector" for="fileInput">Upload</button>
+                        <input type="file" id="fileInput" name="fileInput" style="display: none" webkitdirectory multiple>
+                    </span>
+                    <span>
+                        <button onclick="makeEmptyFolder()" id="addFolder">Create</button>
+                    </span>
+                </div>
+            </div>
+            <div class="openedList" id="openedList"></div>
+            <div class="search_box">
+                <input type="text" placeholder="Search.." id="searchParam"
+                    onKeypress="javascript:if(event.keyCode==13) {search}">
+                <button onclick="search(document.getElementById('searchParam').value, 0)">
+                    <img src="./images/search.png" width='26' heigth='26'></button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="FolderListContainer">
+                <div class="folderList" id="folderList"></div>
+                <script src="directory_upload.js"></script>
+            </div>
+            <div class="main" id="mainDisplay">
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="virtual_folder.js"></script>
+</body>
+</html>

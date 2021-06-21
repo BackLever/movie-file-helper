@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+html,
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.window-title {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.ctxMenuClass {
+    position: absolute;
+    box-sizing: border-box;
+    min-height: 20px;
+    min-width: 100px;
+    background-color: #EEEEEE;
+    box-shadow: 0 0 1px 2px lightgray;
+}
+
+.ctxMenuClass ul {
+    list-style: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.ctxMenuClass li {
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.ctxMenuClass li:hover {
+    background-color: #EBA83A;
+    color: #FFFFFF;
+}
+
+.folderListBoxClass {
+    position: absolute;
+    box-sizing: border-box;
+    min-height: 20px;
+    min-width: 100px;
+    background-color: #EEEEEE;
+    box-shadow: 0 0 1px 2px lightgray;
+}
+
+.folderListBoxClass ul {
+    list-style: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.folderListBoxClass li {
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.folderListBoxClass li:hover {
+    background-color: #EBA83A;
+    color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-left: 4px solid #EBA83A;
+    border-right: 4px solid #EBA83A;
+    border-bottom: 4px solid #EBA83A;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.top_bar {
+    background-color: #FFFFFF;
+    -webkit-flex: initial;
+    flex: initial;
+    display: -webkit-flex;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+}
+
+.top_bar .options {
+    -webkit-flex: initial;
+    flex: initial;
+    background: #FFFFFF;
+    border-right: 4px solid #EBA83A;
+    width: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.top_bar .options #addFolder{
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #564A4A;
+    margin: 1px;
+    font-size: 11px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.top_bar .options #addFolder:hover {
+    background-color: #EBA83A;
+    color: #EEEEEE;
+    border-color: #FFFFFF;
+}
+
+.fileSelector {
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 7px 5px;
+    border-radius: 5px;
+    border: 1px solid #564A4A;
+    margin: 1px;
+    font-size: 11px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.fileSelector:hover {
+    background-color: #EBA83A;
+    color: #EEEEEE;
+    border-color: #FFFFFF;
+}
+
+.top_bar .openedList {
+    -webkit-flex: 1;
+    flex: 1;
+    background: #FFFFFF;
+    border-bottom: 2px solid #EBA83A;
+    border-right: 2px solid #EBA83A;
+}
+
+.openedList .openedSpan {
+    margin: 1px;
+    border: 1px solid #EBA83A;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.openedList .openedButton {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    margin-right: -3px;
+}
+
+.openedList .openedButton:hover {
+    color: #EBA83A;
+}
+
+.openedList .closeButton {
+    background-color: #FFFFFF;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    margin-left: -3px;
+}
+
+.openedList .closeButton:hover {
+    color : #EBA83A;
+}
+
+.top_bar .search_box {
+    background: #EEEEEE;
+    border-radius: 5px;
+    border: 2px solid #EBA83A;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.top_bar .search_box input[type="text"] {
+    background-color: #EEEEEE;
+    font-size: 12px;
+    height: 24px;
+    width: 140px;
+    border: none;
+    outline: none;
+    margin-left: 8px;
+}
+
+.top_bar .search_box button {
+    float: right;
+    height: 24px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.bottom {
+    -webkit-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.bottom .FolderListContainer {
+    background: #FFFFFF;
+    -webkit-flex: initial;
+    flex: initial;
+    border-right: 4px solid #EBA83A;
+    width: 200px;
+    height: 100%;
+    overflow: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bottom .fileDiv {
+    display: none;
+    padding-top: 5px;
+}
+
+.bottom .virtualFolder {
+    display: inline-block;
+    font-size: 18px;
+    color: #343A40;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.bottom .virtualFolder:hover {
+    background-color: #f1c784;
+}
+
+.bottom .folderImg {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.bottom .fileButton {
+    font-size: 14px;
+    color: #343A40;
+    padding-left: 10px;
+    margin-top: -15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.bottom .fileButton:hover {
+    background-color: #f1c784;
+}
+
+[id$="-toggle"] {
+    margin-left: 5px;
+}
+
+.bottom #renameID {
+    border: 1px solid #564A4A;
+    outline: none;
+    width: 130px;
+}
+
+.bottom .main {
+    background: #EEEEEE;
+    position: relative;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+
+.bottom .main .movieSpan {
+    display: inline-block;
+    margin: 15px 20px 0px 20px;
+    width: 150px;
+    height: 215px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.bottom .main .movieSpan .movieTitleSpan {
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.bottom .main .movieSpan .movieButton {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.bottom .main #poster {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 325px;
+}
+
+.bottom .main #options {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 325px;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 30px;
+}
+
+.bottom .main #options .detailsButton {
+    margin: 0 auto;
+    border: 1px solid #343A40;
+    border-radius: 2px;
+    width: 60px;
+    height: 20px;
+}
+
+.bottom .main #options .detailsButton:hover {
+    background-color: #EBA83A;
+    color: #EEEEEE;
+    border: none;
+}
+
+.bottom .main #details {
+    background: #EEEEEE;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    max-width: 1000px;
+    min-width: 200px;
+    min-height: 375px;
+    padding: 15px;
+    font-size: 20px;
+    line-height: 1.7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
